@@ -1,4 +1,4 @@
-$primary-color: rgb(71, 99, 110);
+$primary-color: rgb(69, 98, 109);
 $secondary-color: #e26d2a;
 $show-home-image: true;
 $home-image: url(../img/programming.jpg);
@@ -28,6 +28,16 @@ $background-opacity: 0.8;
          }
       }
 
+   }
+}
+
+@function set-text-color($color) {
+   @if (lightness($color)>40) {
+      @return rgb(0, 0, 0);
+   }
+
+   @else {
+      @return rgb(255, 255, 255);
    }
 }
 
